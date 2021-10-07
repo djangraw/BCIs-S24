@@ -10,7 +10,15 @@ If you've installed MNE-Python, the original dataset path and description can be
 
 ```python
 import numpy as np
+# Load dictionary
 data = np.load('SSVEP_S1.npz')
+```
+Fields can then be extracted like this:
+```python
+# extract variables from dictionary
+eeg = data['eeg']
+channels = data['channels']
+fs = ...
 ```
 
 **Notes:**
