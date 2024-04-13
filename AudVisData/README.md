@@ -23,7 +23,8 @@ fs = ...
 
 **Notes:**
 - The fields of the dictionary are as follows:
- - `eeg`: the eeg data in Volts. Each row is a channel and each column is a sample.
+ - `eeg`: the eeg data. Each row is a channel and each column is a sample. Its units can be found in `data['units']`.
+ -`units`: the units of the EEG data (e.g., 'V', 'mV','uV').
  - `channels`: the name of each channel, in the same order as the eeg matrix. So ```eeg[0,:]``` is from channel ```channels[0]```.
  - `fs`: the sampling frequency in Hz.
  - `event_samples`: the sample when each event occurred. So ```eeg[:,event_samples[0]]``` is the EEG data on all channels at the moment when the first event occurred.
